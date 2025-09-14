@@ -3,6 +3,9 @@
 
 A Monaco Editor wrapper with NebulaAI integrations for decentralized development environments.
 
+[![npm version](https://badge.fury.io/js/%40nebulaai%2Fmonaco-editor.svg)](https://www.npmjs.com/package/@nebulaai/monaco-editor)
+[![GitHub stars](https://img.shields.io/github/stars/Nebulaaitech/Monaco-editor?style=social)](https://github.com/Nebulaaitech/Monaco-editor)
+
 ## Features
 
 - Monaco Editor integration
