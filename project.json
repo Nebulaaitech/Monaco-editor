@@ -1,0 +1,25 @@
+{
+  "name": "nebulaai-monaco-editor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nebulaai-monaco-editor/src",
+  "projectType": "library",
+  "tags": ["scope:nebulaai", "type:editor"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["packages/nebulaai-monaco-editor/dist"],
+      "options": {
+        "commands": [
+          "tsc -p packages/nebulaai-monaco-editor/tsconfig.json"
+        ]
+      }
+    },
+    "validate-boundaries": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/nebulaai-monaco-editor/**/*.ts"]
+      }
+    }
+  }
+}

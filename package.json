@@ -1,0 +1,67 @@
+
+{
+  "name": "@nebulaai/monaco-editor",
+  "version": "1.2.0",
+  "description": "Monaco Editor wrapper with NebulaAI integrations for decentralized development",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external monaco-editor",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch --external monaco-editor",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "monaco",
+    "editor",
+    "nebulaai",
+    "decentralized",
+    "development",
+    "typescript",
+    "code-editor"
+  ],
+  "author": "Jorge Gonzalez & Temporal AI Technologies Inc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TemporalAITech/NebulaAI.git",
+    "directory": "packages/nebulaai-monaco-editor"
+  },
+  "bugs": {
+    "url": "https://github.com/TemporalAITech/NebulaAI/issues"
+  },
+  "homepage": "https://nebulaai.dev",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.44.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6",
+    "eslint": "^8.0.0",
+    "rimraf": "^3.0.2"
+  },
+  "peerDependencies": {
+    "monaco-editor": ">=0.40.0"
+  }
+}
